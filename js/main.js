@@ -19,6 +19,11 @@ DevTools console e network sono nostri amici
       url: myApi,
       success: function (data) {
         self.text(data.response);
+        if(self.text() <= 5) {
+          self.addClass('yellow')
+        } else if (self.text() > 5) {
+          self.addClass('green');
+        }
       },
       error: function (data) {
         alert('ERROR', 'Si è verificato un errore');
