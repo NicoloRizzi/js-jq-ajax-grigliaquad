@@ -26,6 +26,9 @@ body {
   height: 100%;
   border: 1px solid red; /*debug*/
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .yellow {
