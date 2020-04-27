@@ -10,15 +10,15 @@ DevTools console e network sono nostri amici
   //ref
   var myApi = "https://flynn.boolean.careers/exercises/api/random/int";
   var boxes = $(".cell");
+  
   boxes.click(function () {
     var self = $(this);
-    console.log(self);
-    
+
     $.ajax({
       type: "GET",
       url: myApi,
       success: function (data) {
-        $('#random-number').text(data.response);
+        self.text(data.response);
       },
       error: function (data) {
         alert('ERROR', 'Si è verificato un errore');
